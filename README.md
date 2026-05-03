@@ -1,2 +1,13 @@
 # Simple-Calculator-App-
-Basic calculator performing arithmetic operations using JavaScript
+This is a basic calculator web application built using HTML, CSS, and JavaScript.
+
+## 🚀 Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+## 🛠️ Technologies Used
+- HTML
+- CSS
+- JavaScript
