@@ -1,21 +1,68 @@
-let display = document.getElementById("display");
-
-function appendValue(value) {
-  display.value += value;
+body {
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
 }
 
-function clearDisplay() {
-  display.value = "";
+.calculator {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-function deleteLast() {
-  display.value = display.value.slice(0, -1);
+#display {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  background: #dcdcdc;
 }
 
-function calculate() {
-  try {
-    display.value = eval(display.value);
-  } catch {
-    display.value = "Error";
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 15px;
 }
+
+button {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #d3d3d3;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Special Colors */
+.clear {
+  background: red;
+  color: white;
+}
+
+.delete {
+  background: #bdbdbd;
+}
+
+.operator {
+  background: orange;
+  color: white;
+}
+
+.equal {
+  background: green;
+  color: white;
+  grid-column: span 2;
+                                }
